@@ -1,0 +1,192 @@
+.app {
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 1.1rem;
+}
+.pricing-block {
+  background-color: black;
+  border-radius: 25px;
+  height: 220px;
+  .price {
+    color: white;
+    display: inline-flex;
+    font-family: Sans-serif;
+    text-align: left;
+    width: fit-content;
+    margin-right: 45px;
+  }
+}
+.actual-price {
+  color: white;
+  text-align: center;
+  font-family: Sans-serif;
+  padding-top: 30px;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+.title-el {
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+}
+.all-content {
+  text-align: center;
+}
+
+.form-group {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+label {
+  border-radius: 4px;
+  width: 38%;
+  box-sizing: border-box;
+  display: inline-flex;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input,
+span,
+textarea {
+  font-size: 16px;
+  font-family: "Arial", sans-serif;
+  padding: 16px;
+  border: 0;
+  outline: none;
+  border-radius: 10px;
+}
+
+.button-price {
+  background: #fff;
+  color: black;
+  text-decoration: none;
+  margin-top: 15px;
+  font-size: 19px;
+  line-height: 38px;
+  border-radius: 10px;
+  transition: all 0.3s;
+  width: 90%;
+  text-align: center;
+  padding: 5px;
+  border: none;
+}
+
+.blocks-of-electricity {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+.block-of-info {
+  background-color: #d3d3d3;
+  display: inline-block;
+  border-radius: 10px;
+  width: 45%;
+  height: 150px;
+  i {
+    display: block;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    border-radius: 15px;
+    place-content: center;
+    font-size: 1.3rem;
+  }
+}
+.block-of-info.danger {
+  background-color: red;
+}
+.title-of-block {
+  margin-left: 10px;
+  color: #5b5b5b;
+  text-align: left;
+  font-size: 1.2rem;
+}
+.price-of-block {
+  text-align: left;
+  margin-left: 20px;
+}
+
+.more-than-acual-price {
+  border: 1px white solid;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  color: white;
+  border-radius: 50px;
+  padding: 30px;
+}
+.stop-buying {
+  background: red;
+  color: white;
+  text-decoration: none;
+  margin-top: 15px;
+  font-size: 19px;
+  line-height: 38px;
+  border-radius: 10px;
+  transition: all 0.3s;
+  width: 90%;
+  text-align: center;
+  padding: 5px;
+  border: none;
+}
+
+.loader {
+  width: 145px;
+  height: 251px;
+  position: relative;
+  margin: auto;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #ff8001;
+  box-shadow: 0 0 0 50px;
+  clip-path: polygon(
+    100% 0,
+    23% 46%,
+    46% 44%,
+    15% 69%,
+    38% 67%,
+    0 100%,
+    76% 57%,
+    53% 58%,
+    88% 33%,
+    60% 37%
+  );
+}
+.loader:after {
+  animation: l8 1s infinite;
+  transform: perspective(300px) translateZ(0px);
+}
+@keyframes l8 {
+  to {
+    transform: perspective(300px) translateZ(180px);
+    opacity: 0;
+  }
+}
+
+.charging-time {
+  color: white;
+}
+.will-buy {
+  h3 {
+    color: white;
+  }
+}
+
+/* MOBILE */
