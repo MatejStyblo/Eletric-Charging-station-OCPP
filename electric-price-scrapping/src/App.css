@@ -24,7 +24,7 @@
   margin-left: 10px;
   margin-top: 20px;
 }
-.title-el {
+.title-el, {
   text-align: center;
   color: white;
   font-size: 3rem;
@@ -112,7 +112,7 @@ textarea {
   margin-left: 10px;
   color: #5b5b5b;
   text-align: left;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .price-of-block {
   text-align: left;
@@ -143,42 +143,19 @@ textarea {
   border: none;
 }
 
+/* HTML: <div class="loader"></div> */
 .loader {
-  width: 145px;
-  height: 251px;
-  position: relative;
-  margin: auto;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: white;
+  font-size: 30px;
+  transform: translateY(40px);
+  animation: l1 1s linear infinite alternate;
 }
-.loader:before,
-.loader:after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: #ff8001;
-  box-shadow: 0 0 0 50px;
-  clip-path: polygon(
-    100% 0,
-    23% 46%,
-    46% 44%,
-    15% 69%,
-    38% 67%,
-    0 100%,
-    76% 57%,
-    53% 58%,
-    88% 33%,
-    60% 37%
-  );
+.loader:before {
+  content:"Načítání..."
 }
-.loader:after {
-  animation: l8 1s infinite;
-  transform: perspective(300px) translateZ(0px);
-}
-@keyframes l8 {
-  to {
-    transform: perspective(300px) translateZ(180px);
-    opacity: 0;
-  }
-}
+@keyframes l1 {to{opacity: 0}}
 
 .charging-time {
   color: white;
@@ -189,4 +166,93 @@ textarea {
   }
 }
 
-/* MOBILE */
+
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: black !important;
+}
+
+.bottom-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.bottom-nav-item {
+  flex: 1;
+  text-align: center;
+}
+
+.bottom-nav-link {
+  display: block;
+  padding: 10px 0;
+  color: black;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.bottom-nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Settings */
+.settings-title{
+  text-align: center;
+
+}
+/* Logout */
+.logout-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logout-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 1000;
+  text-align: center;
+}
+
+.logout-message {
+  margin-bottom: 20px;
+}
+
+.logout-actions {
+  margin-top: 20px;
+}
+
+.logout-confirm-button {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.logout-cancel-button {
+  background-color: gray;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
